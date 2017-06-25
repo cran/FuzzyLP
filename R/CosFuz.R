@@ -48,7 +48,8 @@
 #' ##               x1 +   x2 <= 4
 #' ##               x1, x2 are non-negative real numbers
 #' 
-#' obj <- c(TrapezoidalFuzzyNumber(0,2,2,3), TrapezoidalFuzzyNumber(1,3,4,5))
+#' obj <- c(FuzzyNumbers::TrapezoidalFuzzyNumber(0,2,2,3), 
+#'         FuzzyNumbers::TrapezoidalFuzzyNumber(1,3,4,5))
 #' A<-matrix(c(1, 1, 3, 1), nrow = 2)
 #' dir <- c("<=", "<=")
 #' b <- c(6, 4)
@@ -60,11 +61,11 @@
 #' FOLP.ordFun(obj, A, dir, b, maximum = max, ordf="Average", lambda=0.8, t=3)
 #' 
 #' # Define a custom linear function
-#' av <- function(tfn) {mean(core(tfn))}
+#' av <- function(tfn) {mean(FuzzyNumbers::core(tfn))}
 #' FOLP.ordFun(obj, A, dir, b, maximum = max, ordf="Custom", FUN=av)
 #' 
 #' # Define a custom linear function
-#' avp <- function(tfn, a) {a*mean(core(tfn))}
+#' avp <- function(tfn, a) {a*mean(FuzzyNumbers::core(tfn))}
 #' FOLP.ordFun(obj, A, dir, b, maximum = max, ordf="Custom", FUN=avp, a=2)
 
 FOLP.ordFun <- function(objective, A, dir, b, maximum = TRUE, 
@@ -133,7 +134,8 @@ FOLP.ordFun <- function(objective, A, dir, b, maximum = TRUE,
 #' ##               x1 +   x2 <= 4
 #' ##               x1, x2 are non-negative real numbers
 #' 
-#' obj <- c(TrapezoidalFuzzyNumber(0,2,2,3), TrapezoidalFuzzyNumber(1,3,4,5))
+#' obj <- c(FuzzyNumbers::TrapezoidalFuzzyNumber(0,2,2,3), 
+#'          FuzzyNumbers::TrapezoidalFuzzyNumber(1,3,4,5))
 #' A<-matrix(c(1, 1, 3, 1), nrow = 2)
 #' dir <- c("<=", "<=")
 #' b <- c(6, 4)
@@ -293,7 +295,8 @@ FOLP.interv <- function(objective, A, dir, b, maximum = TRUE, w1=0.5, min=0, max
 #' ##               x1 +   x2 <= 4
 #' ##               x1, x2 are non-negative real numbers
 #' 
-#' obj <- c(TrapezoidalFuzzyNumber(0,2,2,3), TrapezoidalFuzzyNumber(1,3,4,5))
+#' obj <- c(FuzzyNumbers::TrapezoidalFuzzyNumber(0,2,2,3), 
+#'          FuzzyNumbers::TrapezoidalFuzzyNumber(1,3,4,5))
 #' A<-matrix(c(1, 1, 3, 1), nrow = 2)
 #' dir <- c("<=", "<=")
 #' b <- c(6, 4)
