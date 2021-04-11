@@ -15,7 +15,6 @@
 #' @param maximum \code{TRUE} to maximize the objective function, \code{FALSE} to minimize the objective function.
 #' @param verbose \code{TRUE} to show aditional screen info, \code{FALSE} to hide aditional screen info.
 #' @return \code{crispLP} returns the solution if the solver has found it or NULL if not.
-#' @import ROI
 #' @export crispLP
 #' @examples 
 #' ## maximize:   3*x1 + x2

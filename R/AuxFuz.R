@@ -7,7 +7,6 @@
   dir2-dir3 # < and <= become 1, > and >= become -1 and other thing become 0
 }
 
-#' @import FuzzyNumbers
 .Yager_1 <- function(tfn){
   tfn<-as.TrapezoidalFuzzyNumber(tfn)
   r <- supp(tfn)[1]

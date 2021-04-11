@@ -5,11 +5,29 @@
 \alias{FCLP.sampledBeta}
 \title{Solves a Fuzzy Linear Programming problem with fuzzy constraints.}
 \usage{
-FCLP.fixedBeta(objective, A, dir, b, t, beta = 0.5, maximum = TRUE,
-  verbose = TRUE)
+FCLP.fixedBeta(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  beta = 0.5,
+  maximum = TRUE,
+  verbose = TRUE
+)
 
-FCLP.sampledBeta(objective, A, dir, b, t, min = 0, max = 1, step = 0.25,
-  maximum = TRUE, verbose = TRUE)
+FCLP.sampledBeta(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  min = 0,
+  max = 1,
+  step = 0.25,
+  maximum = TRUE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{objective}{A vector \eqn{(c_1, c_2, \ldots, c_n)}{(c1, c2, \ldots, cn)} with the objective function coefficients \eqn{f(x)=c_1 x_1+\ldots+c_n x_n}{f(x)=c1*x1+\ldots+cn*xn}.}

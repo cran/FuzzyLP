@@ -8,17 +8,48 @@
 \title{Solves a Fuzzy Linear Programming problem with fuzzy constraints trying to assure a minimum (maximum) value 
 of the objective function.}
 \usage{
-FCLP.classicObjective(objective, A, dir, b, t, z0 = 0, maximum = TRUE,
-  verbose = TRUE)
+FCLP.classicObjective(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  z0 = 0,
+  maximum = TRUE,
+  verbose = TRUE
+)
 
-FCLP.fuzzyObjective(objective, A, dir, b, t, z0 = 0, t0 = 0,
-  maximum = TRUE, verbose = TRUE)
+FCLP.fuzzyObjective(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  z0 = 0,
+  t0 = 0,
+  maximum = TRUE,
+  verbose = TRUE
+)
 
-FCLP.fuzzyUndefinedObjective(objective, A, dir, b, t, maximum = TRUE,
-  verbose = TRUE)
+FCLP.fuzzyUndefinedObjective(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  maximum = TRUE,
+  verbose = TRUE
+)
 
-FCLP.fuzzyUndefinedNormObjective(objective, A, dir, b, t, maximum = TRUE,
-  verbose = TRUE)
+FCLP.fuzzyUndefinedNormObjective(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  maximum = TRUE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{objective}{A vector \eqn{(c_1, c_2, \ldots, c_n)}{(c1, c2, \ldots, cn)} with the objective function coefficients \eqn{f(x)=c_1 x_1+\ldots+c_n x_n}{f(x)=c1*x1+\ldots+cn*xn}.}

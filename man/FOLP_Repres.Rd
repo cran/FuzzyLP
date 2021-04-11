@@ -6,14 +6,30 @@
 \alias{FOLP.strat}
 \title{Solves a fuzzy objective linear programming problem using Representation Theorem.}
 \usage{
-FOLP.multiObj(objective, A, dir, b, maximum = TRUE, min = 0, max = 1,
-  step = 0.25)
+FOLP.multiObj(
+  objective,
+  A,
+  dir,
+  b,
+  maximum = TRUE,
+  min = 0,
+  max = 1,
+  step = 0.25
+)
 
-FOLP.interv(objective, A, dir, b, maximum = TRUE, w1 = 0.5, min = 0,
-  max = 1, step = 0.25)
+FOLP.interv(
+  objective,
+  A,
+  dir,
+  b,
+  maximum = TRUE,
+  w1 = 0.5,
+  min = 0,
+  max = 1,
+  step = 0.25
+)
 
-FOLP.strat(objective, A, dir, b, maximum = TRUE, min = 0, max = 1,
-  step = 0.25)
+FOLP.strat(objective, A, dir, b, maximum = TRUE, min = 0, max = 1, step = 0.25)
 }
 \arguments{
 \item{objective}{A vector \eqn{(c_{1}^{f}, c_{2}^{f}, ..., c_{n}^{f})}{(c1, c2, ..., cn)} of 

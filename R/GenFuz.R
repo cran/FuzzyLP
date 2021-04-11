@@ -78,8 +78,6 @@ GFLP <- function(objective, A, dir, b, t, maximum = TRUE,
     } else {
       objective<-sapply(objective, ordf_obj2, simplify="array", USE.NAMES=FALSE)
     }
-    
-    #print(objective);
   }
   
   if (any(sapply(A,class)=="TrapezoidalFuzzyNumber")) fuzmatrix=T else fuzmatrix=F;
@@ -102,7 +100,6 @@ GFLP <- function(objective, A, dir, b, t, maximum = TRUE,
     }
     
     dim(A)<-aux
-    #print(A)
   }
   
   if(fuzb) {
@@ -113,8 +110,6 @@ GFLP <- function(objective, A, dir, b, t, maximum = TRUE,
     } else {
       b<-sapply(b, ordf_res2, simplify="array", USE.NAMES=FALSE)
     }
-    
-    #print(b)
   }
   
   if(fuzt) {
@@ -125,23 +120,20 @@ GFLP <- function(objective, A, dir, b, t, maximum = TRUE,
     } else {
       t<-sapply(t, ordf_res2, simplify="array", USE.NAMES=FALSE)
     }
-    #print(t)
   }
-  #print(t)
-  
+
   sol <- FCLP.sampledBeta(objective, A, dir, b, t, min, max, step, maximum)
   
   if (!is.null(sol)){
     sol <- sol[,1:(ncol(sol)-1)] # Deletes the last column (the objective of the aux problem)
     obj <- NULL
     for (i in 1:nrow(sol)){
-      obj<-c(obj,.evalObjective(old_objective,sol[i,2:3]))
-      #obj<-c(obj,7)#.evalObjective(objective,sal[i,2:3]))
+      obj<-c(obj,.evalObjective(old_objective,sol[i,2:ncol(sol)]))
+      #obj<-c(obj,7)#.evalObjective(objective,sol[i,2:3]))
     }
     
     #obj=.evalObjective(objective,sol) # Calculate the real objective
     sol <- cbind(sol, objective=obj) # Adds the real objective
-    #plot(obj)
   }
   sol
 }

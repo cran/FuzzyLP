@@ -4,8 +4,16 @@
 \alias{FOLP.ordFun}
 \title{Solves a fuzzy objective linear programming problem using ordering functions.}
 \usage{
-FOLP.ordFun(objective, A, dir, b, maximum = TRUE, ordf = c("Yager1",
-  "Yager3", "Adamo", "Average", "Custom"), ..., FUN = NULL)
+FOLP.ordFun(
+  objective,
+  A,
+  dir,
+  b,
+  maximum = TRUE,
+  ordf = c("Yager1", "Yager3", "Adamo", "Average", "Custom"),
+  ...,
+  FUN = NULL
+)
 }
 \arguments{
 \item{objective}{A vector \eqn{(c_{1}^{f}, c_{2}^{f}, ..., c_{n}^{f})}{(c1, c2, ..., cn)} of 

@@ -5,10 +5,21 @@
 \title{Solves a maximization (minimization) problem having fuzzy coefficients in the constraints, the 
 objective function and/or the technological matrix.}
 \usage{
-GFLP(objective, A, dir, b, t, maximum = TRUE, ordf_obj = c("Yager1",
-  "Yager3", "Adamo", "Average"), ordf_obj_param = NULL,
+GFLP(
+  objective,
+  A,
+  dir,
+  b,
+  t,
+  maximum = TRUE,
+  ordf_obj = c("Yager1", "Yager3", "Adamo", "Average"),
+  ordf_obj_param = NULL,
   ordf_res = c("Yager1", "Yager3", "Adamo", "Average"),
-  ordf_res_param = NULL, min = 0, max = 1, step = 0.25)
+  ordf_res_param = NULL,
+  min = 0,
+  max = 1,
+  step = 0.25
+)
 }
 \arguments{
 \item{objective}{A vector \eqn{(c_{1}^{f}, c_{2}^{f}, ..., c_{n}^{f})}{(c1, c2, ..., cn)} of 
