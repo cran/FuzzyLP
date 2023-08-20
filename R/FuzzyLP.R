@@ -10,5 +10,6 @@
 #' @references Bellman, R. and Zadeh, L. Decision making in a fuzzy environment. Management Science 17 (B) 4:141-164, 1970.
 #'
 #' @docType package
+#' @aliases FuzzyLP-package
 #' @name FuzzyLP
 NULL

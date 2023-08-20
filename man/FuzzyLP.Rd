@@ -3,6 +3,7 @@
 \docType{package}
 \name{FuzzyLP}
 \alias{FuzzyLP}
+\alias{FuzzyLP-package}
 \title{Fuzzy Linear Programming}
 \description{
 FuzzyLP is a package to solve fuzzy linear programming problems.
